@@ -1,4 +1,4 @@
-class Todo {
+export default class Todo {
     id: number;
     title: string;
     context: string;
@@ -15,4 +15,4 @@ class Todo {
         this.updated_at = updated_at;
     }
 
-}
+};

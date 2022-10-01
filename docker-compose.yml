@@ -3,19 +3,21 @@ version: '3'
 services:
   client:
     container_name: todo-vue
+    build: ./client
     image: web-ui
     ports:
       - 8080:8080
     volumes:
       - ./client:/src:cached
     tty: true
-    # command: yarn serve
+    command: yarn serve
 
   api:
     container_name: todo-go
     links: 
       - db
     build: ./api
+    image: golang:1.15
     ports:
       - 8888:8888
     volumes:

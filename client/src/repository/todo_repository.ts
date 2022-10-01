@@ -1,4 +1,5 @@
-import { Todo, Form } from '@/types/todo'
+import { Form } from '@/types/todo'
+import Todo from '@/models/todo'
 
 export default interface TodoRepository {
     Get(): Promise<Todo[]>;
